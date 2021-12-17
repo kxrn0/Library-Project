@@ -1,0 +1,424 @@
+*, *::before, *::after {
+    margin : 0;
+    padding: 0;
+    box-sizing : border-box;
+}
+
+body {
+    background : rgb(238, 230, 230);
+}
+
+.bg {
+    background : rgb(210, 216, 235);
+    width : 90%;
+    height : 100vh;
+    z-index : -1;
+    position : fixed;
+    border-radius : 15px;
+    top : 0;
+    left : 5%;
+}
+
+.content {
+    margin : 10px auto;
+    width : 90%;
+    border-radius : 15px;
+    position : relative;
+}
+
+.butt {
+    padding : 5px;
+    font-size : 16px;
+    background : rgb(228, 180, 157);
+}
+
+.butt:hover {
+    background : rgb(211, 153, 136);
+}
+
+.butt:active {
+    transform : scale(.99);
+    background : rgb(207, 139, 130);
+}
+
+.header {
+    padding : 10px;
+    background : rgb(173, 177, 228);
+    border-top-left-radius : 10px;
+    border-top-right-radius : 10px;  
+    box-shadow : 0 10px 15px -10px rgb(20, 17, 65);  
+    display: flex;
+    justify-content: space-around;
+    align-items : baseline;
+    position : fixed;
+    top : 0;
+    width : 90%;
+    z-index : 1;
+}
+
+.title {
+    align-self : flex-start;
+    font-size : 25px;
+    color : rgb(41, 55, 131);
+}
+
+.info {
+    display : flex;
+    font-size : 20px;
+    justify-content: space-between;
+}
+
+/* .profile {
+    display : flex;    
+    flex-direction : column;
+}
+
+.profile img {
+    margin : 10px;
+    width : 65px;
+    border-radius : 50%;
+    box-shadow : 0 0 10px rgb(61, 10, 85);
+} */
+
+.info p {
+    margin : 10px;
+}
+
+.book img {
+    width : 125px;
+}
+
+@media only screen and (max-width : 725px) {
+    .header {
+        display : flex;
+        flex-direction : column;
+        align-items : center;
+    }
+}
+
+/* BOOKS */
+
+.books {
+    display : flex;
+    flex-wrap : wrap;
+    justify-content : space-around;
+    gap : 1.5em;
+    margin : 145px 0 100px 0;
+    padding : 10px;
+}
+
+.book {
+    background : rgb(161, 162, 201);
+    box-shadow : 0 10px 15px rgb(75, 107, 145);
+    display : flex;
+    border-radius : 10px;
+    padding : 20px;
+    width : 400px;
+}
+
+.book span {
+    color : rgb(5, 31, 54);
+}
+
+.book-info {
+    font-size : 20px;
+    color : azure;
+    margin : 10px;
+    display : flex;
+    flex-direction : column;
+    justify-content : space-around;
+}
+
+.footer {
+    background : rgb(173, 177, 228);
+    position : fixed;
+    bottom : 0;
+    width : 90%;
+    padding : 10px;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius : 10px;
+    border-bottom-right-radius : 10px; 
+}
+
+.add-book {
+    width : 60px;
+    height : 60px;
+    border-radius : 50%;
+    padding : 10px;
+    font-size : 30px;
+    background : rgb(141, 52, 201);
+    color : azure;
+}
+
+.add-book:hover {
+    background : rgb(136, 41, 180);
+}
+
+.add-book:active {
+    background : rgb(73, 34, 163);
+    transform : scale(.97);
+    color : rgb(0, 119, 255);
+}
+
+/* BUTTS */
+
+.inactive {
+    opacity : 0;
+    pointer-events: none;
+    transform : translateY(-10px);
+}
+
+.active {
+    opacity : 1;
+    pointer-events : auto;
+    transform : translate(0);
+}
+
+.status {
+    position : relative;
+}
+
+.status-butt {
+    padding : 5px;
+    font-size : 17px;
+    background : rgb(222, 231, 223);
+    margin : 10px 0;
+}
+
+.status-butt:hover {
+    background : rgb(203, 216, 203);
+}
+
+.status-butt:focus {
+    background : rgb(203, 216, 203);
+}
+
+.status-butt:active {
+    background : rgb(171, 194, 176);
+    transform : scale(.97);
+}
+
+.status-choices {
+    width : 200px;
+}
+
+.status-choices div {
+    margin : 5px;
+}
+
+.status-choices {
+    position : absolute;
+    left : 0;
+    top : calc(100% + .25rem);
+    padding : 10px;
+    font-size : 19px;
+    background : rgba(166, 151, 202, 0.9);
+    border-radius : 10px;
+    box-shadow : 0 10px 15px rgb(67, 93, 124);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.change {
+    margin-top : 10px;
+    width : 200px;
+    display: flex;
+    justify-content : space-between;
+}
+
+.edit, .remove {
+    padding : 10px;
+    border-radius : 7px;
+}
+
+.edit {
+    background : rgb(78, 247, 27);
+}
+
+.remove {
+    background : rgb(236, 39, 39);
+}
+
+.edit:hover {
+    background : rgb(37, 209, 21);
+}
+
+.remove:hover {
+    background : rgb(201, 35, 30);
+}
+
+.edit:active {
+    background : rgb(14, 185, 57);
+}
+
+.remove:active {
+    background : rgb(160, 25, 21);
+}
+
+/* CREATE ENTRY */
+
+.create-entry {
+    background : rgba(124, 120, 148, 0.7);
+    position : fixed;
+    top : 0;
+    left : 0;
+    z-index : 1;
+    height : 100%;
+    width : 100%;
+
+    display : none;
+}
+
+.entry {
+    background : greenyellow;
+    width : 500px;
+    margin : 10% auto;
+    padding : 10px;
+    border-radius : 10px;
+    background : rgb(176, 177, 206);
+    box-shadow : 0 5px 15px rgb(39, 60, 85);
+    font-size : 20px;
+    color : azure;
+}
+
+.entry-input {
+    width : 50%;
+    padding : 3px;
+    border-radius : 5px;
+    font-size : 17px;
+    background : rgb(243, 242, 223);
+}
+
+#entry-pages {
+    width : 30%;
+}
+
+.entry-info {
+    display : flex;
+}
+
+.entry-info-details {
+    display : flex;
+    flex-direction : column;
+    justify-content : space-around;
+}
+
+.entry-cover {
+    width : 125px;
+    height : 178px;
+    background : rgb(103, 103, 128);
+    margin : 0 15px 15px 0;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    position : relative;
+}
+
+.entry-cover img {
+    width : 125px;
+}
+
+#entry-butt-cover {
+    display : none;
+}
+
+.entry-label {
+    color :rgb(5, 31, 54);
+    font-size : 42px;
+    padding : 5px;
+    border-radius : 5px;
+    background : rgb(241, 227, 227);
+}
+
+.entry-label:hover {
+    background : rgb(226, 214, 211);
+}
+
+.entry-label:active {
+    background : rgb(204, 192, 190);
+}
+
+.entry-buttons {
+    display : flex;
+    justify-content : space-around;
+    margin-top : 15px;
+}
+
+.create, .cancel, .edit {
+    padding : 10px;
+    font-size : 17px;
+    border-radius : 5px;
+}
+
+.create, .edit {
+    background : rgb(173, 241, 69);
+}
+
+.cancel {
+    background : rgb(240, 107, 107);
+}
+
+.create:hover {
+    background : rgb(109, 219, 58);
+}
+
+.cancel:hover {
+    background : rgb(211, 100, 86);
+}
+
+.create:active {
+    background : rgb(59, 185, 42);
+    transform : scale(.97);
+}
+
+.cancel:active {
+    background : rgb(196, 86, 71);
+    transform : scale(.97);
+}
+
+.warning-message {
+    margin-left : 5px;
+    color : rgb(243, 18, 18);
+    font-size : 15px;
+    padding : 5px;
+    border-radius : 3px;
+    display : inline-block;
+    background : rgb(231, 231, 105);
+    position : relative;
+    transition : 500ms;
+}
+
+.warning-message::before {
+    position : absolute;
+    content : '';
+    left : -18px;
+    top : calc(50% - 9px);
+    border : 9px solid transparent;
+    border-right-color : rgb(231, 231, 105);
+}
+
+.hidden {
+    transform : scale(0);
+}
+
+.shown {
+    transform : scale(1);
+}
+
+.change-cover {
+    position : absolute;
+    width : 25px;
+    height : 25px;
+    top : 5px;
+    right : 5px;
+    padding : 3px;
+    background : rgb(224, 241, 220);
+    border-radius : 50%;
+    font-size : 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color : azure;
+    cursor : pointer;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js" defer></script>
+    <title>Library</title>
+</head>
+
+<body>
+    <main class="content">
+        <div class="bg"></div>
+
+        <header class="header">
+            <div class="title">
+                <h1>библиотека</h1>
+                <p>Book tracker</p>
+            </div>
+            <div class="info">
+                <p>Reading : <span id="reading-count">0</span></p>
+                <p>Completed : <span id="completed-count">0</span></p>
+                <p> On Hold : <span id="on-hold">0</span></p>
+                <p>Total : <span id="total">0</span></p>
+            </div>
+            <!-- <div class="profile">
+                <img src="profile.png" alt="profile pic">
+                <button class="login butt">Login</button>
+            </div> -->
+        </header>
+        <section class="books">
+        </section>
+        <footer class="footer">
+            <button class="add-book">+</button>
+        </footer>
+
+        <section class="create-entry">
+            <div class="entry">
+                <div class="entry-info">
+                    <div class="entry-cover">
+                        <div class="change-cover hidden">&#10060;</div>
+                        <div class="input-wrapper">
+                            <label for="entry-butt-cover" class="entry-label">&#8687;</label>
+                            <input type="file" id="entry-butt-cover" accept=".jpeg, .jpg, .png, .gif">
+                        </div>
+                    </div>
+
+                    <div class="entry-info-details">
+                        <div>
+                            <label for="entry-title">Title : </label>
+                            <input type="text" id="entry-title" class="entry-input">
+                            <p class="warning-message hidden" id="title-warning">Required!</p>
+                        </div>
+                        <div>
+                            <label for="entry-author">Author : </label>
+                            <input type="text" id="entry-author" class="entry-input">
+                            <p class="warning-message hidden" id="author-warning">Required!</p>
+                        </div>
+                        <div>
+                            <label for="entry-pages">Pages : </label>
+                            <input type="number" id="entry-pages" class="entry-input">
+                            <p class="warning-message hidden" id="pages-warning">Required!</p>
+                        </div>
+
+                        <div class="status entry-status">
+                            <button class="status-butt entry-butt">Status ☞</button>
+                            <p class="warning-message hidden" id="butt-warning">Required!</p>
+                            <div class="status-choices inactive">
+                                <div id="choice-completed">
+                                    <input type="radio" id="completed" name="status" value="Completed" class="choice">
+                                    <label for="completed">Completed</label>
+                                </div>
+                                <div id="choice-reading">
+                                    <input type="radio" id="reading" name="status" value="Reading" class="choice">
+                                    <label for="reading">Reading</label>
+                                </div>
+                                <div id="choice-plan-to-read">
+                                    <input type="radio" id="plan-to-read" name="status" value="Plan to Read"
+                                        class="choice">
+                                    <label for="plan-to-read">Plan to Read</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="entry-buttons">
+                    <button class="edit hidden green">Change</button>
+                    <button class="create green">Create</button>
+                    <button class="cancel">Cancel</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
