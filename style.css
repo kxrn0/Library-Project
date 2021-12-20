@@ -68,18 +68,6 @@ body {
     justify-content: space-between;
 }
 
-/* .profile {
-    display : flex;    
-    flex-direction : column;
-}
-
-.profile img {
-    margin : 10px;
-    width : 65px;
-    border-radius : 50%;
-    box-shadow : 0 0 10px rgb(61, 10, 85);
-} */
-
 .info p {
     margin : 10px;
 }
@@ -421,4 +409,52 @@ body {
     align-items: center;
     color : azure;
     cursor : pointer;
+}
+
+@media only screen and (max-width : 650px) {
+    .bg, .content, .header, .footer {
+        width : 100vw;
+        padding : 5px;
+    }
+
+    .title {
+        font-size : 15px;
+    }
+
+    .info {
+        font-size : 10px;
+    }
+
+    .book {
+        width : 325px;
+    }
+
+    .book-info {
+        font-size : 15px;
+    }
+    
+    .change {
+        width : 140px;
+    }
+
+    .book img {
+        width : 100px;
+    }
+
+    .books {
+        margin : 80px 0 80px 0;
+    }
+
+    .entry {
+        width : 350px;
+        font-size : 15px;
+    }
+
+    .entry-buttons {
+        margin-top : 5px;
+    }
+
+    .warning-message {
+        font-size : 15px;
+    }
 }

@@ -93,3 +93,62 @@ function blur(imageData, kWidth) {
 
     contextCover.putImageData(imageData, 0, 0);
 }
+
+export function random(a, b) {
+    return a + Math.random() * (b - a);
+}
+
+export function map(value, start1, end1, start2, end2) {
+    return start2 + (end2 - start2) * (value - start1) / (end1 - start1);
+}
+export class Vector {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.length = Math.sqrt(this.x * this.x + this.y * this.y);
+        this.angle = Math.atan2(this.y, this.x);
+    }
+
+    add(vec) {
+        this.x += vec.x;
+        this.y += vec.y
+        this.length = Math.sqrt(this.x * this.x + this.y * this.y);
+        this.angle = Math.atan2(this.y, this.x);
+    }
+
+    subs(vec) {
+        this.x -= vec.x;
+        this.y -= vec.y;
+        this.length = Math.sqrt(this.x * this.x + this.y * this.y);
+        this.angle = Math.atan2(this.y, this.x);
+    }
+
+    dot(vec) {
+        return this.x * vec.x + this.y * vec.y;
+    }
+
+    mult(value) {
+        this.x *= value;
+        this.y *= value;
+    }
+
+    static add(vec1, vec2) {
+        return new Vector(vec1.x + vec2.x, vec1.y + vec2.y);
+    }
+
+    static subs(vec1, vec2) {
+        return new Vector(vec1.x - vec2.x, vec1.y - vec2.y);
+    }
+
+    static dot(vec1, vec2) {
+        return vec1.x * vec2.x + vec1.y + vec2.y;
+    }
+
+    static vector_from_angle(angle, mag = 1) {
+        return new Vector(mag * Math.cos(angle), mag * Math.sin(angle));
+    }
+
+    static random_vector(mag = 1) {
+        return new Vector(mag * Math.cos(random(0, 2 * Math.PI)), mag * Math.sin(random(0, Math.PI * 2)));
+    }
+}
